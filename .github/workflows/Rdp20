@@ -1,0 +1,22 @@
+nome: Avica
+ 
+sobre:
+  fluxo de trabalho_despacho:
+ 
+empregos:
+  construir:
+    nome: Comece a construir...
+    executa em: windows-latest
+    tempo limite-minutos: 360
+ 
+    passos:
+      - nome: Baixando e instalando o Essentials
+        executar: |
+          Invoke-WebRequest -Uri "https://gitlab.com/raposabrty/pcrdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+ 
+      - nome: Mostrar site
+        execute: cmd /c show.bat
+ 
+      - nome: Contador de Tempo
+        execute: cmd /c loop.bat
